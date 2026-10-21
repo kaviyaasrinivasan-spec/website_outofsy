@@ -1,0 +1,25 @@
+fastapi
+uvicorn[standard]
+SQLAlchemy==1.4.46
+psycopg2-binary
+python-dotenv
+pydantic
+email-validator
+
+# File uploads -- FastAPI's UploadFile/File(...) will not import without this
+python-multipart
+
+# Password hashing. bcrypt is pinned: 4.1+ removed the __about__ attribute
+# that passlib 1.7.4 reads at import, which raises a warning and can break.
+passlib[bcrypt]
+bcrypt<4.1
+
+# HTTP client for the Google OAuth token exchange
+httpx
+
+# Certificate PDF generation + QR verification codes
+reportlab
+qrcode[pil]
+
+# Excel export for operations reports
+openpyxl

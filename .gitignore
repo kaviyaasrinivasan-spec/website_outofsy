@@ -1,0 +1,55 @@
+# Secrets -- never commit these
+.env
+.env.*
+!.env.example
+backend/.env
+backend/google.json
+*.pem
+*.key
+
+# Python
+venv/
+venv_win/
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Uploads (user content, not source)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+backend.log
+
+# Test artifacts
+backend/tests/*.db
+backend/uploads/certificates/*
+backend/uploads/documents/*
+
+# Extra safety
+venv_local/
+.venv/
+*.tsbuildinfo
+*.p12
+*.pfx
+id_rsa*
+**/google*.json
+**/*credentials*.json
+**/*service-account*.json
+__MACOSX/
+venv*/
